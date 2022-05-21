@@ -1,3 +1,8 @@
 remote_theme: just-the-docs/just-the-docs
 
+title: GSoC 2022 Blog
+description: Arduino module based on Zephyr
+baseurl: "/Blog-GSoC22" # the subpath of your site, e.g. /blog
+url: "https://dhruvag2000.github.io/Blog-GSoC22" # the base hostname & protocol for your site, e.g. http://example.com
+
 logo: "/assets/images/Zephyr_Logo-White.png"
