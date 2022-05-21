@@ -1,6 +1,6 @@
 ---
 layout: default
-title: UI Components
+title: Weekly Progress
 nav_order: 2
 has_children: true
 permalink: /logs/logs.md
