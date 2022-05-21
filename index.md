@@ -4,7 +4,7 @@ title: Home
 nav_order: 1
 description: "Official Blog for Google Summer of Code 2022 to maintain Documentation, progress logs and research"
 permalink: /
-has_children: true
+has_children: false
 ---
 
 # GSoC'22- Arduino module based on Zephyr
