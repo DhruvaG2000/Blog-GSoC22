@@ -26,7 +26,8 @@ The project idea is to create a Zephyr module that leverages the Arduino Core so
 
 ## Introduction <a name="intro"></a>
 
-TODO
+### About Zephyr OS
+The [Zephyr OS](https://docs.zephyrproject.org/latest/introduction/index.html) is based on a small-footprint kernel designed for use on resource-constrained and embedded systems: from simple embedded environmental sensors and LED wearables to sophisticated embedded controllers, smart watches, and IoT wireless applications.
 
 ## Implementation Details <a name="implementation"></a>
 
@@ -34,7 +35,15 @@ TODO
 
 ## Benefit <a name="benefit"></a>
 
-TODO
+Quoting [Jonathan Beri](https://github.com/beriberikix),
+
+> Arduino's popularity is renowned as a popular framework for providing a simplified interface to program embedded devices. Recently, Arduino adopted mbed OS as the base RTOS for some of their newer devices. With that work, they separated out Arduino Core as an independent abstraction layer from Arduino Core for mbed. This opens up the possibility for leveraging Arduino Core on other OSes.
+
+
+Essentially, 
+- This project starts an effort to use Arduino APIs as well as advanced Zephyr capabilities. 
+- It will also enable a broader set of devices than the standard Arduino ecosystem thanks to Zephyrs' device support.
+- In future perhaps we will also have the ability to re-use Arduino tools like the Arduino IDE and wealth of libraries that it offers.
 
 ## References <a name="ref"></a>
 
