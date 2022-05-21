@@ -3,7 +3,7 @@ layout: default
 title: Weekly Progress
 nav_order: 2
 has_children: true
-permalink: /logs/logs.md
+permalink: /docs/logs
 ---
 
 # Weekly Progress
