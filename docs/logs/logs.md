@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Weekly Progress
-nav_order: 2
+nav_order: 99
 has_children: true
 permalink: /docs/logs
 ---
