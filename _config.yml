@@ -5,7 +5,7 @@ description: Arduino module based on Zephyr
 baseurl: "/Blog-GSoC22" # the subpath of your site, e.g. /blog
 url: "https://dhruvag2000.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
-logo: "/assets/images/Zephyr_Logo-White.png"
+logo: "https://docs.zephyrproject.org/latest/_static/images/kite.png"
 
 search_enabled: true
 search:
