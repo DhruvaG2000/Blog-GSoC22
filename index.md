@@ -38,7 +38,7 @@ TODO
 ## References <a name="ref"></a>
 
 - [Original GSoC Project idea - Zephyr issue # 32621](https://github.com/zephyrproject-rtos/zephyr/issues/32621)
-- [Discussion: Supporting the Arduino ecosystem].
+- [Discussion: Supporting the Arduino ecosystem](https://github.com/zephyrproject-rtos/zephyr/issues/22247).
 - [Installing Zephyr on linux](https://learn.adafruit.com/blinking-led-with-zephyr-rtos/installing-zephyr-linux)
 - [Arduino on Zephyr project](https://github.com/soburi/arduino-on-zephyr).
 - [Arduino core API](https://github.com/arduino/ArduinoCore-API)
