@@ -31,7 +31,23 @@ The [Zephyr OS](https://docs.zephyrproject.org/latest/introduction/index.html) i
 
 ## Implementation Details <a name="implementation"></a>
 
-TODO
+**Summary of Discussion: Supporting the Arduino ecosystem:**
+
+@soburi developed a proof-of-concept trying to make it simple to import Zephyr as a library in the Arduino IDE. See https://github.com/soburi/arduino-on-zephyr. It proved to create a lot of maintenance overhead (as currently implemented), but shows it is possible.
+
+The insights from this experimental arduino package were:
+- Arduino-API is stable and since most functions are already provided from Zephyr, we need only to go ahead and implement improvements of wrappers.  However, review potential issue [here#22247](https://github.com/zephyrproject-rtos/zephyr/issues/22247).
+- **Building source:** Arduino source is built by ``arduino-builder`` system. That is far from general ``make`` systems. The difference of build system between Arduino and Zephyr is based on their fundamental of design and so the hack will remain till the end most probably.
+- **Board Configuration:** Config file is frequentry need to create in Zephyr development, But not considered in Arduino IDE.
+Arduino prefers to configure peripherals in the code unlike zephyr where config is done outside the code like a ``prj.conf`` file.
+
+- We can use tools such as west command and PlatformIO that already support Zephyr. It also can support compilation of ``.ino`` files by implementing a CMake rule. In this case, different with Arduino is only that need to contain 'CMakeLists.txt' and 'prj.conf'.
+The exact implementation details of the above mentioned method is still to be done.
+
+In short, this project is a starting effort to start introducing zephyr to the Arduino ecosystem and thus aims to provide Arduino API as zephyr module. Further more, basic external Arduino libraries should also be compatible within the project. Refer the flowchart below for a visual understanding.
+
+![](/assets/images/main_flow.png)
+
 
 ## Benefit <a name="benefit"></a>
 
