@@ -9,6 +9,8 @@ has_children: false
 
 # GSoC'22- Arduino module based on Zephyr
 
+![im](assets/images/website_header.png)
+
 The project idea is to create a Zephyr module that leverages the Arduino Core so that a developer can use Zephyr as the underlying OS when they use the Arduino framework on Arduino-compatible devices.
 
 ## About
