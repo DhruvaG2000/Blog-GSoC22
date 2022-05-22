@@ -46,7 +46,9 @@ The exact implementation details of the above mentioned method is still to be do
 
 In short, this project is a starting effort to start introducing zephyr to the Arduino ecosystem and thus aims to provide Arduino API as zephyr module. Further more, basic external Arduino libraries should also be compatible within the project. Refer the flowchart below for a visual understanding.
 
-![](assets/images/main_flow.png)
+<p align="center">
+  <img src="assets/images/main_flow.png" />
+</p>
 
 
 ## Benefit <a name="benefit"></a>
