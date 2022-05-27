@@ -46,7 +46,7 @@ Arduino prefers to configure peripherals in the code unlike zephyr where config 
 - We can use tools such as west command and PlatformIO that already support Zephyr. It also can support compilation of ``.ino`` files by implementing a CMake rule. In this case, different with Arduino is only that need to contain 'CMakeLists.txt' and 'prj.conf'.
 The exact implementation details of the above mentioned method is still to be done.
 
-In short, this project is a starting effort to start introducing zephyr to the Arduino ecosystem and thus aims to provide Arduino API as zephyr module. Further more, basic external Arduino libraries should also be compatible within the project. Refer the flowchart below for a visual understanding.
+In short, this project is am effort to start introducing zephyr gradually to the Arduino ecosystem and thus aims to provide Arduino API as zephyr module. Further more, basic external Arduino libraries should also be compatible within the project. Refer the flowchart below for a visual understanding.
 
 <p align="center">
   <img src="assets/images/main_flow.png" />
