@@ -19,3 +19,24 @@ This can also be given with ``-DZEPHYR_EXTRA_MODULES=/<path>/foo`` then the modu
 ### [Module yaml file description](https://docs.zephyrproject.org/latest/develop/modules.html#module-yaml-file-description)
 
 A module can be described using a file named zephyr/module.yml. The format of zephyr/module.yml is described in the following:
+
+### Compiling my custom module
+
+I created a custom module called ``Arduino-Core-Zephyr`` .
+The structure of this module looks like:
+```
+.
+├── CMakeLists.txt
+├── cores
+│   ├── arduino
+│   └── CMakeLists.txt
+├── examples
+│   └── hello_world
+├── Kconfig
+├── README.md
+└── zephyr
+    └── module.yml
+```
+
+To make sure zephyr uses it while building, we use the following command:
+``west build  -p -b qemu_x86 samples/hello_world -DZEPHYR_EXTRA_MODULES=/home/dhruva/zephyrproject/modules/lib/Arduino-Core-Zephyr``
