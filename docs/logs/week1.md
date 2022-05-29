@@ -19,3 +19,5 @@ nav_order: 3
     4. Should we create another discord channel for this project to filter conversation and keep it project related? It will make communication much more easier. Let me know your preference for the mode of communication. (For eg. during my last year's project I mainly used Slack threads and email with my mentor) 
 - Read the soburi/arduino-on-zephyr repo and tried to build a sample blinky app. This failed with errors that I have elaborated on here - https://github.com/soburi/arduino-on-zephyr/issues/26 .
 - Started reading the Arduino API and study how to use it.
+- Started maintaining my own repo [here](https://github.com/DhruvaG2000/Arduino-Core-Zephyr) to record progress and module.
+- Wrote "hello world" example where I included Arduino_API and checked that including the module doesn't cause any build errors.
