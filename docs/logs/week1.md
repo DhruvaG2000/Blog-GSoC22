@@ -8,6 +8,7 @@ nav_order: 3
 # Week 1
 
 (23rd May - 30th May)
+
 - GSoC proposal is accepted.
 - Community Bonding Period begins
 - Setup zephyr and zephyr SDK on my local machine.
