@@ -22,3 +22,9 @@ nav_order: 4
 - The echo UART example also did not make the arduino show up in as a serial device on my laptop. Finally had to use a Logic Analyzer to probe it's physical UART pins to see that there was indeed UART output there.
 How to get this UART output from the USB cable is something that needs to be taken care of in the device tree of the ``arduino nano ble 33`` is my guess.
 - Deciding to narrow down on the external library written for Arduino for the ADS1115 (IIC) ADC. Will discuss with mentors in upcoming meetings.
+- MoM with Jonathan on Monday, 6th June 2022:
+    - I had hit a road block with the soburi repo and couldn't find where he had made his Serial instance and thus I can't figure how we can implement println. Decided to stop that hunt for now and instead of referring to soburi's structure, we will be now referring to mbed (https://github.com/arduino/ArduinoCore-mbed) more from now.
+    - Decided that the first ever library/ driver to implement using my project would be the ADS1115 driver (https://github.com/Wh1teRabbitHU/ADS1115-Driver) which basically works over IIC protocol. Hence I will first and foremost need to implement Wire.h in zephyr.
+    - Will document my understanding of how they have implemented Wire.h but using mbed functions and an mbedI2C class whose object Wire is being used everytime we need to do something over IIC in mbed. I will be doing similar to this in zephyr.
+    
+    Thus in summary, my first task in this coding period will be to implement this I2C using zephyr as a ``class zephyrI2C: public HardwareI2C``
