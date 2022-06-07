@@ -7,7 +7,7 @@ nav_order: 4
 
 # Week 2
 
-(31st May - 7th June)
+(31st May - 6th June)
 
 - Placed order for hardware - Arduino mkr zero and breadboard.
 - Implemented ``delay()`` and ``delayus()`` and tested with a Hello world example.
