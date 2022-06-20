@@ -9,6 +9,16 @@ nav_order: 4
 
 [This repo](https://github.com/arduino/ArduinoCore-mbed) contains an implementation of Arduino style classes and methods but using mbed OS underneath. This is something very similar to what we are trying to do with Zephyr.
 
+## UART/ Serial Implementation
+
+- Inside [Arduino.h](https://github.com/arduino/ArduinoCore-mbed/blob/master/cores/arduino/Arduino.h#L108) there is a ``#define`` that leads to an object ``_UART1_`` inside [Serial.h](https://github.com/arduino/ArduinoCore-mbed/blob/master/cores/arduino/Serial.h).
+
+- Here, we can see from ``extern arduino::UART _UART1_;`` that the object is of ``class UART`` which is defined just above.
+
+- The implementations of the functions inside this class are then found in [Serial.cpp](https://github.com/arduino/ArduinoCore-mbed/blob/master/cores/arduino/Serial.cpp).
+
+Similar structure can be followed for this project by simply replacing the implementations of all the functions with zephyr style functions.
+
 ## I2C Implementation
 
 There is a file in the arduino API, ``HardwareI2C.h`` which contains the virtual prototypes of all the methods related to IIC. However as the class HardwareI2C is virtual we can not implement these methods as a part of this class and hence will need our own library / class definition that inherits from this _virtual base class_ .
