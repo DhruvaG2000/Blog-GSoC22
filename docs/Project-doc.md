@@ -25,7 +25,7 @@ TODO: implement
 
 I2C implementation needed me to dive into the basics of the protocol itself. Here's the live demo of a stream of X Y Z Co-ordinates coming from the ADXL345 connected to the arduino over I2C.
 
-![](https://github.com/DhruvaG2000/Blog-GSoC22/blob/main/assets/images/LA_FullView1.png)
+![](/assets/images/transparent-LA_FullView1.png)
 
 We can see that there are 2 wires required in I2C - _SDA_ and _SCL_. The _SDA_ line carries data and _SCL_ carries  the clock pulse.  To understand better, here's what was actually going on at a logic level:
 
