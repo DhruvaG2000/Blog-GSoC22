@@ -23,5 +23,24 @@ TODO: implement
 
 ## I2C
 
-**ADS1115** 
-TODO: complete implementation
+I2C implementation needed me to dive into the basics of the protocol itself. Here's the live demo of a stream of X Y Z Co-ordinates coming from the ADXL345 connected to the arduino over I2C.
+
+![](/assets/images/LA_FullView1.png)
+
+We can see that there are 2 wires required in I2C - _SDA_ and _SCL_. The _SDA_ line carries data and _SCL_ carries  the clock pulse.  To understand better, here's what was actually going on at a logic level:
+
+![](assets/images/LA_i2c_view1.png)
+
+- `Wire.beginTransmission(0x53)` stores the address `0x53` in a local variable `_address`.
+- `Wire.write(0x2C)` and `Wire.write(0x08)` append data to be written to the `txBuffer` inside the arduino.
+- Finally, `Wire.endTransmission();` actually transfers the data (contents of `txBuffer`) over _i2c_ to the ADXL345.
+
+- `Wire.requestFrom(0x53, 1)` takes in the `address` (here, 0x53), and `len` which is the length of bytes needed. Data is then read over _i2c_ from the ADXL345 and appended/ stored in a ring buffer. A Ring Buffer is a Circular Buffer in Zephyr and can be used for applications where a fixed size array doesn't suffice.
+
+- `Wire.read()` finally returns the first element stored in the ringbuffer and pops it from there.  In the waveform below, we can see the response coming from ADXL as `0x03`.
+
+![](/assets/images/LA_i2c_view2.png)
+
+
+**ADXL345** 
+Testing Done.
