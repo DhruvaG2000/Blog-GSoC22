@@ -29,7 +29,7 @@ I2C implementation needed me to dive into the basics of the protocol itself. Her
 
 We can see that there are 2 wires required in I2C - _SDA_ and _SCL_. The _SDA_ line carries data and _SCL_ carries  the clock pulse.  To understand better, here's what was actually going on at a logic level:
 
-![](assets/images/LA_i2c_view1.png)
+![](/assets/images/LA_i2c_view1.png)
 
 - `Wire.beginTransmission(0x53)` stores the address `0x53` in a local variable `_address`.
 - `Wire.write(0x2C)` and `Wire.write(0x08)` append data to be written to the `txBuffer` inside the arduino.
