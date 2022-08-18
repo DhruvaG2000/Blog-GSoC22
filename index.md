@@ -31,6 +31,50 @@ The project idea is to create a Zephyr module that leverages the Arduino Core so
 ### About Zephyr OS
 The [Zephyr OS](https://docs.zephyrproject.org/latest/introduction/index.html) is based on a small-footprint kernel designed for use on resource-constrained and embedded systems: from simple embedded environmental sensors and LED wearables to sophisticated embedded controllers, smart watches, and IoT wireless applications.
 
+## Project Preview
+
+As the basic goal is to have almost any top of the shelf arduino tutorial to work with zephyr, we have many samples which includes a button press to glow LED example. As you can see from the code below it almost completely resembles the code that you would write inside Arduino IDE.
+```C++
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+/* Button Press turns on inbuilt LED example */
+
+#include <Arduino.h>
+
+const int buttonPin = D9; // the number of the pushbutton pin
+const int ledPin = 13;    // the number of the LED pin
+
+// variables will change:
+int buttonState = 0; // variable for reading the pushbutton status
+
+void setup() {
+  // initialize the LED pin as an output:
+  pinMode(ledPin, OUTPUT);
+  // initialize the pushbutton pin as an input:
+  pinMode(buttonPin, INPUT);
+}
+
+void loop() {
+  // read the state of the pushbutton value:
+  buttonState = digitalRead(buttonPin);
+
+  // check if the pushbutton is pressed. If it is, the buttonState is HIGH:
+  if (buttonState == HIGH) {
+    // turn LED on:
+    digitalWrite(ledPin, HIGH);
+  } else {
+    // turn LED off:
+    digitalWrite(ledPin, LOW);
+  }
+}
+```
+
+For more samples, just visit the ``sample/`` folder on the project's [github page](https://github.com/zephyrproject-rtos/gsoc-2022-arduino-core)
+
+Also works with external libs like ``Wire`` for I2C and this can enable you to use any sensors that use IIC!
+
 ## Implementation Details <a name="implementation"></a>
 
 **Summary of Discussion: Supporting the Arduino ecosystem:**
