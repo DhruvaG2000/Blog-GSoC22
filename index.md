@@ -49,42 +49,41 @@ implementation details.
 The basic goal is to have almost any top of the shelf arduino tutorial/ libaries to work with zephyr. We have many
 samples which almost completely resemble the code that you would write inside the Arduino IDE. Shown below is a code
 snippet of a basic press a button to turn on LED sample,
-```C++
-/*
+
+<pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);"><span class="hljs-comment" style="color: rgb(136, 136, 136);">/*
  * SPDX-License-Identifier: Apache-2.0
- */
+ */</span>
 
-/* Button Press turns on inbuilt LED example */
+<span class="hljs-comment" style="color: rgb(136, 136, 136);">/* Button Press turns on inbuilt LED example */</span>
 
-#include <Arduino.h>
+<span class="hljs-meta" style="color: rgb(31, 113, 153);">#<span class="hljs-meta-keyword" style="font-weight: 700;">include</span> <span class="hljs-meta-string" style="color: rgb(77, 153, 191);">&lt;Arduino.h&gt;</span></span>
 
-const int buttonPin = D9; // the number of the pushbutton pin
-const int ledPin = 13;    // the number of the LED pin
+<span class="hljs-keyword" style="font-weight: 700;">const</span> <span class="hljs-keyword" style="font-weight: 700;">int</span> buttonPin = D9; <span class="hljs-comment" style="color: rgb(136, 136, 136);">// the number of the pushbutton pin</span>
+<span class="hljs-keyword" style="font-weight: 700;">const</span> <span class="hljs-keyword" style="font-weight: 700;">int</span> ledPin = <span class="hljs-number" style="color: rgb(136, 0, 0);">13</span>;    <span class="hljs-comment" style="color: rgb(136, 136, 136);">// the number of the LED pin</span>
 
-// variables will change:
-int buttonState = 0; // variable for reading the pushbutton status
+<span class="hljs-comment" style="color: rgb(136, 136, 136);">// variables will change:</span>
+<span class="hljs-keyword" style="font-weight: 700;">int</span> buttonState = <span class="hljs-number" style="color: rgb(136, 0, 0);">0</span>; <span class="hljs-comment" style="color: rgb(136, 136, 136);">// variable for reading the pushbutton status</span>
 
-void setup() {
-  // initialize the LED pin as an output:
-  pinMode(ledPin, OUTPUT);
-  // initialize the pushbutton pin as an input:
-  pinMode(buttonPin, INPUT);
+<span class="hljs-keyword" style="font-weight: 700;">void</span> <span class="hljs-built_in" style="color: rgb(57, 115, 0);">setup</span>() {
+  <span class="hljs-comment" style="color: rgb(136, 136, 136);">// initialize the LED pin as an output:</span>
+  <span class="hljs-built_in" style="color: rgb(57, 115, 0);">pinMode</span>(ledPin, <span class="hljs-literal" style="color: rgb(120, 169, 96);">OUTPUT</span>);
+  <span class="hljs-comment" style="color: rgb(136, 136, 136);">// initialize the pushbutton pin as an input:</span>
+  <span class="hljs-built_in" style="color: rgb(57, 115, 0);">pinMode</span>(buttonPin, <span class="hljs-literal" style="color: rgb(120, 169, 96);">INPUT</span>);
 }
 
-void loop() {
-  // read the state of the pushbutton value:
-  buttonState = digitalRead(buttonPin);
+<span class="hljs-keyword" style="font-weight: 700;">void</span> <span class="hljs-built_in" style="color: rgb(57, 115, 0);">loop</span>() {
+  <span class="hljs-comment" style="color: rgb(136, 136, 136);">// read the state of the pushbutton value:</span>
+  buttonState = <span class="hljs-built_in" style="color: rgb(57, 115, 0);">digitalRead</span>(buttonPin);
 
-  // check if the pushbutton is pressed. If it is, the buttonState is HIGH:
-  if (buttonState == HIGH) {
-    // turn LED on:
-    digitalWrite(ledPin, HIGH);
-  } else {
-    // turn LED off:
-    digitalWrite(ledPin, LOW);
+  <span class="hljs-comment" style="color: rgb(136, 136, 136);">// check if the pushbutton is pressed. If it is, the buttonState is HIGH:</span>
+  <span class="hljs-built_in" style="color: rgb(57, 115, 0);">if</span> (buttonState == <span class="hljs-literal" style="color: rgb(120, 169, 96);">HIGH</span>) {
+    <span class="hljs-comment" style="color: rgb(136, 136, 136);">// turn LED on:</span>
+    <span class="hljs-built_in" style="color: rgb(57, 115, 0);">digitalWrite</span>(ledPin, <span class="hljs-literal" style="color: rgb(120, 169, 96);">HIGH</span>);
+  } <span class="hljs-built_in" style="color: rgb(57, 115, 0);">else</span> {
+    <span class="hljs-comment" style="color: rgb(136, 136, 136);">// turn LED off:</span>
+    <span class="hljs-built_in" style="color: rgb(57, 115, 0);">digitalWrite</span>(ledPin, <span class="hljs-literal" style="color: rgb(120, 169, 96);">LOW</span>);
   }
-}
-```
+}</pre>
 
 For more samples, just visit the ``sample/`` folder on the project's [github page](https://github.com/zephyrproject-rtos/gsoc-2022-arduino-core)
 
