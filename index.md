@@ -104,7 +104,8 @@ used is [Zephyr's meta-tool: west](https://docs.zephyrproject.org/latest/develop
 West is a very easy to use command line tool which aids in almost everything from multiple repository management system,
 to building applications, flashing and debugging them.
 
-Using west, the Zephyr meta tool, Arduino sketches can be compiled and flashed to your target board. Beyond core functions, the addition of an RTOS opens up the ability to use multiple threads in Arduino. Dhruva has includes an excellent threading demonstration by blinking multiple LEDs asynchronously.
+Using west, the Zephyr meta tool, Arduino sketches can be compiled and flashed to your target board. Beyond core functions, the addition of an RTOS opens up the ability to use multiple threads in Arduino. A sample has been developed
+in the project's repository [here: threads_arduino](https://github.com/zephyrproject-rtos/gsoc-2022-arduino-core/tree/main/samples/threads_arduino)
 
 The entire project has been documented in the project's README as well as [Documentation folder](https://github.com/zephyrproject-rtos/gsoc-2022-arduino-core/tree/main/documentation).
 
