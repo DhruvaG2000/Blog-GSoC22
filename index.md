@@ -185,7 +185,7 @@ the uniqueness was in the fact that all of this project's implementation were in
 digging through Zephyr Documentation for all the equivalent functions, figuring out things like ring buffers and how they are used, and
 it was an overall deep dive into how I2C works in Zephyr as well as in general.
 
-* The second challenging part to me was dealing with the **scope** and dealing with a lot of "variable declared multiple times" errors.
+* The **scope** and "variable declared multiple times" errors.
 It was very important to keep in mind the arduino namespace. Namespaces are used to organize code into logical groups and to prevent name collisions that can
 occur especially when your code base includes multiple libraries like was the case in this project.
 Coming to the issue of multiple declarations, this is where I truly learned the value of the "extern" keyword. Extern variable says to compiler  ” go outside my
