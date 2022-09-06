@@ -165,7 +165,7 @@ on how device tree overlays work and why they should be used in this project.
 Now, to save future contributors the trouble of figuring out how overlays work on their own, we have provided documentation in the project's repo along with
 examples of multiple variants to refer to.
 
-* **Locating DT OVerlays**. Well, great that you've added your own variant and written your own DT Overlay. But, now how does the compiler know what your
+* **Locating DT Overlays**. Well, great that you've added your own variant and written your own DT Overlay. But, now how does the compiler know what your
 overlay you've written and where it is? To solve this issue, you can pass a commandline argument in Zephyr,
 ```sh
 west build -b boardname -DDTC_OVERLAY_FILE=$(PATH_TO_OVERLAY)/boardname.overlay
@@ -234,3 +234,4 @@ Essentially,
 - [Arduino core API](https://github.com/arduino/ArduinoCore-API)
 - [Arduino core mbed](https://github.com/arduino/ArduinoCore-mbed)
 - [GFG: extern in C](https://www.geeksforgeeks.org/understanding-extern-keyword-in-c/)
+
